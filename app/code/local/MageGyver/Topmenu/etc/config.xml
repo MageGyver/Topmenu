@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * MageGyver/Topmenu
+ *
+ * Provides a simple way to add individual entries to the topmenu.
+ *
+ * @category    Topmenu
+ * @package     MageGyver
+ * @copyright   Copyright (c) 2013 MageGyver. (http://www.magegyver.de)
+ * @license     http://creativecommons.org/licenses/by-sa/3.0/  CC-by-sa 3.0
+ */
+-->
+<config>
+
+	<modules>
+		<MageGyver_Topmenu>
+			<version>0.1.0</version>
+		</MageGyver_Topmenu>
+	</modules>
+
+	<global>
+		<blocks>
+			<topmenu>
+				<class>MageGyver_Topmenu_Block</class>
+			</topmenu>
+			<page>
+				<rewrite>
+					<html_topmenu>MageGyver_Topmenu_Block_Page_Html_Topmenu</html_topmenu>
+				</rewrite>
+			</page>
+		</blocks>
+	</global>
+
+	<frontend>
+		<events>
+			<page_block_html_topmenu_gethtml_before>
+				<observers>
+					<topmenu>
+						<type>singleton</type>
+						<class>MageGyver_Topmenu_Model_Observer</class>
+						<method>page_block_html_topmenu_gethtml_before</method>
+					</topmenu>
+				</observers>
+			</page_block_html_topmenu_gethtml_before>
+		</events>
+
+		<layout>
+			<updates>
+				<topmenu>
+					<file>topmenu.xml</file>
+				</topmenu>
+			</updates>
+		</layout>
+	</frontend>
+
+</config>

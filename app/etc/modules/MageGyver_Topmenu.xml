@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageGyver/Topmenu
+ *
+ * Provides a simple way to add individual entries to the topmenu.
+ *
+ * @category    Topmenu
+ * @package     MageGyver
+ * @copyright   Copyright (c) 2013 MageGyver. (http://www.magegyver.de)
+ * @license     http://creativecommons.org/licenses/by-sa/3.0/  CC-by-sa 3.0
+ */
+-->
+<config>
+	<modules>
+		<MageGyver_Topmenu>
+			<active>true</active>
+			<codePool>local</codePool>
+		</MageGyver_Topmenu>
+	</modules>
+</config>

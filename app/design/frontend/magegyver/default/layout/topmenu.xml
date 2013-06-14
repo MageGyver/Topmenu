@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MageGyver/Topmenu
+ *
+ * Provides a simple way to add individual entries to the topmenu.
+ *
+ * @category    Topmenu
+ * @package     MageGyver
+ * @copyright   Copyright (c) 2013 MageGyver. (http://www.magegyver.de)
+ * @license     http://creativecommons.org/licenses/by-sa/3.0/  CC-by-sa 3.0
+ */
+-->
+<layout version="0.1.0">
+	<!-- Don't forget to put this file to your design or dereference it in
+	     app/code/local/MageGyver/Topmenu/etc/config.xml at
+	     config>frontend>layout>updates -->
+	<default>
+		<reference name="catalog.topnav">
+			<action method="addLink" translate="label">
+				<label>About Us</label>
+				<type>path</type> <!-- currently only "path" is supported -->
+				<path>about-magento-demo-store/</path>
+			</action>
+		</reference>
+	</default>
+</layout>
